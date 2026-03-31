@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menaree & Panudach— We're Getting Married</title>
+    <meta name="description" content="You are invited to our wedding ceremony. เรามีความยินดีขอเรียนเชิญท่านเพื่อเป็นเกียรติเนื่องในพิธีมงคลสมรส">
+    <meta property="og:title" content="Menaree & Panudach are getting married">
+    <meta property="og:description" content="You are invited to our wedding ceremony.">
+    <meta property="og:type" content="website">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Josefin+Sans:wght@300;400;600;700&family=Kanit:ital,wght@0,200;0,300;0,400;0,500;0,600;1,200;1,300;1,400&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="css/style.css?v=5.1">
+    <link rel="stylesheet" href="css/gallery.css?v=2.8">
+</head>
+<body>
+    <!-- ============================================ -->
+    <!-- SPLASH SCREEN (WELCOME OVERLAY) -->
+    <!-- ============================================ -->
+    <div id="splash-welcome" class="splash-overlay">
+        <div class="splash-bg" style="background-image: url('images/gallery-1774932543-8737.webp')"></div>
+        <div class="splash-bg-overlay"></div>
+        <div class="splash-content">
+            <p class="splash-subtitle fade-in-up">You are cordially invited</p>
+            <h2 class="splash-names fade-in-up delay-1">Munaree & Panudach</h2>
+            <div class="splash-ornament fade-in-up delay-2">
+                <span class="splash-orn-line"></span>
+                <span class="splash-orn-icon"><i class="fas fa-heart"></i></span>
+                <span class="splash-orn-line"></span>
+            </div>
+            <div class="splash-card-wrapper fade-in-up delay-2">
+                <img src="images/card.png" alt="Wedding Invitation Card" class="splash-card-img">
+            </div>
+            <button id="btn-open-invitation" class="btn-open-invitation fade-in-up delay-3">
+                <i class="fas fa-envelope-open"></i> &nbsp; เปิดการ์ด / Open Invitation
+            </button>
+        </div>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- 1. HERO SECTION -->
+    <!-- ============================================ -->
+    <section id="hero" class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="hero-floral-frame"></div>
+        <div class="hero-content">
+            <p class="hero-script-names fade-in-up">Munaree & Panudach</p>
+            <h1 class="hero-names fade-in-up delay-1">MUNAREE &nbsp; & &nbsp; PANUDACH</h1>
+            <p class="hero-subtitle fade-in-up delay-2">w e &nbsp; a r e &nbsp; g e t t i n g &nbsp; m a r r i e d</p>
+            <div class="hero-date-line fade-in-up delay-3">
+                <span class="line"></span>
+                <span class="date-text">25 . 04 . 2026</span>
+                <span class="line"></span>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll Down</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- FLOATING MUSIC BUTTON -->
+    <!-- ============================================ -->
+    <div id="music-player" class="music-player">
+        <button id="music-toggle" class="music-btn" aria-label="Toggle music">
+            <i class="fas fa-music"></i>
+        </button>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- 4. COUNTDOWN SECTION -->
+    <!-- ============================================ -->
+    <section id="countdown" class="section countdown-section">
+        <div class="container">
+            <h2 class="section-watermark reveal">TIME TO COUNTDOWN</h2>
+            <p class="countdown-subtitle reveal">
+                we are pleased to invite you to our wedding ceremony<br>
+                and let's celebrate together on our special day in…
+            </p>
+            <div class="countdown-timer reveal" id="countdown-timer" data-target="2026-04-25T06:09:00+07:00">
+                <div class="countdown-item">
+                    <span class="countdown-number" id="days">000</span>
+                    <span class="countdown-label">Days</span>
+                </div>
+                <div class="countdown-separator">:</div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="hours">00</span>
+                    <span class="countdown-label">Hours</span>
+                </div>
+                <div class="countdown-separator">:</div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="minutes">00</span>
+                    <span class="countdown-label">Minutes</span>
+                </div>
+                <div class="countdown-separator">:</div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="seconds">00</span>
+                    <span class="countdown-label">Seconds</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- 5. PARENTS / ON BEHALF OF -->
+    <!-- ============================================ -->
+    <section id="parents" class="section parents-section">
+        <div class="container">
+            <h2 class="section-watermark reveal">ON BEHALF OF</h2>
+            <h3 class="parents-title-th reveal">ในนาม</h3>
+            <div class="parents-grid reveal">
+                <div class="parents-group">
+                    <div class="parent-item">
+                        <h4 class="parent-name">คุณพ่อสุนวน เสาว์ทอง</h4>
+                        <p class="parent-role">คุณพ่อเจ้าสาว</p>
+                    </div>
+                    <div class="parent-item">
+                        <h4 class="parent-name">คุณแม่สาคร เสาว์ทอง</h4>
+                        <p class="parent-role">คุณแม่เจ้าสาว</p>
+                    </div>
+                </div>
+                <div class="parents-divider">
+                    <div class="parents-ampersand">&</div>
+                </div>
+                <div class="parents-group">
+                    <div class="parent-item">
+                        <h4 class="parent-name">คุณแม่จันทร์เพ็ญ ไชยมาศ</h4>
+                        <p class="parent-role">คุณแม่เจ้าบ่าว</p>
+                    </div>
+                </div>
+            </div>
+            <p class="parents-invite-text reveal">
+                มีความยินดีขอเรียนเชิญท่านเพื่อเป็นเกียรติ<br>เนื่องในพิธีมงคลสมรส ระหว่าง
+            </p>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- 6. BRIDE & GROOM (Magazine Style) -->
+    <!-- ============================================ -->
+    <section id="couple" class="section couple-section">
+        <div class="container">
+            <!-- Decorative Divider -->
+            <div class="couple-divider reveal">
+                <span class="line"></span>
+                <span class="dot"></span>
+                <span class="line"></span>
+            </div>
+
+            <!-- BRIDE -->
+            <div class="couple-card reveal">
+                <div class="couple-image-wrapper">
+                    <img src="images/bride.png" alt="Bride" class="couple-image" loading="lazy">
+                </div>
+                <div class="couple-info">
+                    <div class="name-watermark-group">
+                        <div class="couple-role-watermark">BRIDE</div>
+                        <div class="couple-name-en">Munaree S.</div>
+                    </div>
+                    <p class="couple-name-th bride-name-th">นางสาว มุนารี เสาว์ทอง (ยุ้ย)</p>
+                </div>
+            </div>
+
+            <!-- Ring Divider -->
+            <div class="ring-divider reveal-zoom">
+                <img src="images/ring.png" alt="Wedding Rings">
+            </div>
+
+            <!-- GROOM -->
+            <div class="couple-card reveal">
+                <div class="couple-info">
+                    <div class="name-watermark-group">
+                        <div class="couple-role-watermark">GROOM</div>
+                        <div class="couple-name-en">Panudach C.</div>
+                    </div>
+                    <p class="couple-name-th groom-name-th">นาย ภาณุเดช ไชยมาศ (ปอนด์)</p>
+                </div>
+                <div class="couple-image-wrapper">
+                    <img src="images/groom.png" alt="Groom" class="couple-image" loading="lazy">
+                </div>
+            </div>
+
+            <p class="wedding-date-text reveal">
+                ในวันเสาร์ที่ 25 เมษายน พ.ศ. 2569
+            </p>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- 7. WEDDING SCHEDULE -->
+    <!-- ============================================ -->
+    <section id="schedule" class="section schedule-section">
+        <div class="container">
+            <div class="schedule-header reveal">
+                <span class="schedule-line"></span>
+                <span class="schedule-header-text">กำหนดการ</span>
+                <span class="schedule-line"></span>
+            </div>
+            <h2 class="schedule-script-title reveal">Wedding Schedule</h2>
+
+            <div class="schedule-grid">
+                <div class="schedule-item reveal">
+                    <div class="schedule-thumb"><img src="images/gallery-1.png" alt="" loading="lazy"></div>
+                    <h3 class="schedule-title-en">Groom's Procession</h3>
+                    <p class="schedule-title-th">พิธีแห่ขันหมาก</p>
+                    <p class="schedule-time">06 : 39 น.</p>
+                </div>
+                <div class="schedule-item reveal">
+                    <div class="schedule-thumb"><img src="images/gallery-2.png" alt="" loading="lazy"></div>
+                    <h3 class="schedule-title-en">Water Blessing</h3>
+                    <p class="schedule-title-th">พิธีบายศรีสู่ขวัญ บ่าว-สาว</p>
+                    <p class="schedule-time">09 : 09 น.</p>
+                </div>
+                <div class="schedule-item reveal">
+                    <div class="schedule-thumb"><img src="images/gallery-3.png" alt="" loading="lazy"></div>
+                    <h3 class="schedule-title-en">Happy Hours</h3>
+                    <p class="schedule-title-th">ร่วมรับประทานอาหาร</p>
+                    <p class="schedule-time">11 : 09 น. เป็นต้นไป</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- 8. THEME COLOR & VENUE -->
+    <!-- ============================================ -->
+    <section id="venue" class="section venue-section">
+        <div class="container">
+            <div class="theme-color-block reveal">
+                <h3 class="theme-color-title">Theme Color</h3>
+                <div class="theme-colors">
+                    <span class="color-swatch" style="background:#ffd3ac"></span>
+                    <span class="color-swatch" style="background:#f99584"></span>
+                    <span class="color-swatch" style="background:#f98b88"></span>
+                    <span class="color-swatch" style="background:#ffbe98"></span>
+                </div>
+                <p class="venue-dresscode">หรือชุดพื้นเมือง | สีธีม Brown Rose</p>
+            </div>
+
+            <div class="venue-map-block reveal">
+                <div class="venue-pin"><i class="fas fa-map-marker-alt"></i></div>
+                <h3 class="venue-name">ณ บ้านเลขที่ 17 หมู่ 16 บ้านตาโต(ฝั่งบ้านชายทุ่ง) ต.พรมเทพ อ.ท่าตูม จ.สุรินทร์</h3>
+                <p class="venue-hint">( กดลิงค์เพื่อปักหมุดแผนที่เดินทางตรงนี้ค่ะ )</p>
+                <a href="https://www.google.com/maps/search/15.371280,+103.629018?entry=tts" target="_blank" class="venue-map-btn">
+                    <i class="fas fa-map-marker-alt"></i> ปักหมุดแผนที่
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- VENUE CLOSING (Background Image Section)  -->
+    <!-- ============================================ -->
+    <section class="section venue-closing-section">
+        <div class="venue-closing-bg"></div>
+        <div class="venue-closing-overlay"></div>
+        <div class="container venue-closing-content reveal">
+            <p class="venue-script-text">แล้วมาพบกันในวันสำคัญของเราทั้งสองคนนะครับ</p>
+            <p class="venue-script-name">Munaree & Panudach</p>
+            <div class="venue-rose-icon"><i class="fas fa-spa"></i></div>
+            <p class="venue-apology">( ขออภัยหากมิได้มาเรียนเชิญด้วยตนเอง )</p>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- 9. PHOTO GALLERY — Magazine Editorial Style -->
+    <!-- ============================================ -->
+    <section id="gallery" class="section gallery-section">
+        <div class="gallery-bg-watermark"></div>
+        <div class="container container-relative">
+            <div class="gallery-fancy-header reveal">
+                <span class="gallery-bg-text">S H O W T I M E</span>
+                <h2 class="gallery-script-title">Special Gallery</h2>
+                <div class="gallery-divider">
+                    <span class="line"></span>
+                    <span class="icon">
+                        <svg width="40" height="15" viewBox="0 0 50 20" preserveAspectRatio="xMidYMid meet">
+                            <path d="M 10,10 C 15,0 20,20 25,10 C 30,0 35,20 40,10" fill="none" stroke="#333" stroke-width="1.5" stroke-linecap="round"/>
+                            <circle cx="2" cy="10" r="1.5" fill="#333"/>
+                            <circle cx="48" cy="10" r="1.5" fill="#333"/>
+                        </svg>
+                    </span>
+                    <span class="line"></span>
+                </div>
+            </div>
+
+            <!-- PATTERN A: Collage with tall image + inline quote -->
+            <div class="mg-section mg-pattern-a">
+                <div class="mg-grid mg-grid-a">
+                    <div class="mg-item gallery-item" data-index="0"><img src="images/gallery-1774931955-1440.webp" alt="Wedding photo" loading="lazy"><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+                    <div class="mg-item gallery-item" data-index="1"><img src="images/gallery-1774931956-2352.webp" alt="Wedding photo" loading="lazy"><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+                    <div class="mg-item gallery-item" data-index="2"><img src="images/gallery-1774931957-9154.webp" alt="Wedding photo" loading="lazy"><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+                    <div class="mg-quote"><span class="mg-quote-mark">&ldquo;</span><p class="mg-quote-text">Thank you for everything you've done for me. I'm very proud to have you in my life. I'll always love you with all my heart.</p></div>
+                    <div class="mg-item gallery-item" data-index="3"><img src="images/gallery-1774931958-3923.webp" alt="Wedding photo" loading="lazy"><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+                </div>
+                <div style="height: 8px;"></div>
+                <div class="mg-grid mg-grid-b-reversed">
+                    <div class="mg-item gallery-item" data-index="4"><img src="images/gallery-1774931958-5516.webp" alt="Wedding photo" loading="lazy"><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+                    <div class="mg-item gallery-item" data-index="5"><img src="images/gallery-1774931959-2467.webp" alt="Wedding photo" loading="lazy"><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+                    <div class="mg-item gallery-item" data-index="6"><img src="images/gallery-1774931960-8338.webp" alt="Wedding photo" loading="lazy"><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+                    <div class="mg-item gallery-item" data-index="7"><img src="images/gallery-1774931961-5808.webp" alt="Wedding photo" loading="lazy"><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+                    <div class="mg-item gallery-item" data-index="8"><img src="images/gallery-1774932016-4493.webp" alt="Wedding photo" loading="lazy"><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+                </div>
+            </div>
+
+            <!-- PATTERN B: Editorial with featured image -->
+            <div class="mg-section mg-pattern-b">
+                <div class="mg-grid mg-grid-b">
+                    <div class="mg-item gallery-item" data-index="9"><img src="images/gallery-1774932550-7640.webp" alt="Wedding photo" loading="lazy"><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+                    <div class="mg-item gallery-item" data-index="10"><img src="images/gallery-1774932546-9835.webp" alt="Wedding photo" loading="lazy"><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+                    <div class="mg-item gallery-item" data-index="11"><img src="images/gallery-1774781917-7634.webp" alt="Wedding photo" loading="lazy"><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+                    <div class="mg-quote"><span class="mg-quote-mark">&ldquo;</span><p class="mg-quote-text">Sky and sea meet each other at the horizon<br>You and me meet each other at love</p></div>
+                    <div class="mg-item gallery-item" data-index="12"><img src="images/gallery-1774932544-3192.webp" alt="Wedding photo" loading="lazy"><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+                    <div class="mg-item gallery-item" data-index="13"><img src="images/gallery-1774932549-2101.webp" alt="Wedding photo" loading="lazy"><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+                    <div class="mg-item gallery-item" data-index="14"><img src="images/gallery-1774932545-5071.webp" alt="Wedding photo" loading="lazy"><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+                    <div class="mg-item gallery-item" data-index="15"><img src="images/gallery-1774932546-7297.webp" alt="Wedding photo" loading="lazy"><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+                    <div class="mg-item gallery-item" data-index="16"><img src="images/gallery-1774932548-4981.webp" alt="Wedding photo" loading="lazy"><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+                    <div class="mg-item gallery-item" data-index="17"><img src="images/gallery-1774932547-9693.webp" alt="Wedding photo" loading="lazy"><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+                </div>
+            </div>
+
+            <!-- PATTERN C: Elegant mixed -->
+            <div class="mg-section mg-pattern-a">
+                <div class="mg-grid mg-grid-a">
+                    <div class="mg-item gallery-item" data-index="18"><img src="images/gallery-1774932285-8854.webp" alt="Wedding photo" loading="lazy"><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+                    <div class="mg-item gallery-item" data-index="19"><img src="images/gallery-1774932286-9393.webp" alt="Wedding photo" loading="lazy"><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+                    <div class="mg-item gallery-item" data-index="20"><img src="images/gallery-1774932288-3754.webp" alt="Wedding photo" loading="lazy"><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+                    <div class="mg-quote"><span class="mg-quote-mark">&ldquo;</span><p class="mg-quote-text">When you love someone…<br>you'll do anything to reach the heart of the one you love.</p></div>
+                    <div class="mg-item gallery-item" data-index="21"><img src="images/gallery-1774932290-7183.webp" alt="Wedding photo" loading="lazy"><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+                </div>
+                <div style="height: 8px;"></div>
+                <div class="mg-grid mg-grid-b-reversed">
+                    <div class="mg-item gallery-item" data-index="22"><img src="images/gallery-1774932292-3621.webp" alt="Wedding photo" loading="lazy"><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+                    <div class="mg-item gallery-item" data-index="23"><img src="images/gallery-1774932284-6170.webp" alt="Wedding photo" loading="lazy"><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+                    <div class="mg-item gallery-item" data-index="24"><img src="images/gallery-1774932291-8145.webp" alt="Wedding photo" loading="lazy"><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+                    <div class="mg-item gallery-item" data-index="25"><img src="images/gallery-1774932289-4214.webp" alt="Wedding photo" loading="lazy"><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+                    <div class="mg-item gallery-item" data-index="26"><img src="images/gallery-1774932287-4615.webp" alt="Wedding photo" loading="lazy"><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LIGHTBOX -->
+    <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+        <button class="lightbox-close" id="lightbox-close" aria-label="Close"><i class="fas fa-times"></i></button>
+        <button class="lightbox-prev" id="lightbox-prev" aria-label="Previous"><i class="fas fa-chevron-left"></i></button>
+        <button class="lightbox-next" id="lightbox-next" aria-label="Next"><i class="fas fa-chevron-right"></i></button>
+        <div class="lightbox-content">
+            <img id="lightbox-img" src="" alt="Gallery photo">
+        </div>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- 10. GUESTBOOK / WISHES -->
+    <!-- ============================================ -->
+    <section id="wishes" class="section wishes-section">
+        <div class="container">
+            <div class="wishes-layout">
+                <!-- Column 2: Digital Gift Box -->
+                <div class="wishes-column reveal">
+                    <div class="wishes-qr-card">
+                        <div class="qr-card-header">
+                            <div class="qr-gift-icon"><i class="fas fa-gift"></i></div>
+                            <h3 class="qr-card-title">Digital Gift Box</h3>
+                            <p class="qr-card-subtitle">กล่องรับขวัญและของขวัญแทนใจ</p>
+                        </div>
+                        <div class="qr-image-wrapper">
+                            <img src="images/qrcode.jpg" alt="PromptPay QR Code">
+                        </div>
+                        <div class="qr-card-footer">
+                            <p class="qr-instruction-en">Scan via Mobile Banking</p>
+                            <p class="qr-instruction-th">สแกนเพื่อร่วมแสดงความยินดี</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- 11. THANK YOU FOOTER -->
+    <!-- ============================================ -->
+    <footer id="thankyou" class="footer-section">
+        <div class="footer-bg"></div>
+        <div class="footer-overlay"></div>
+        <div class="container footer-content">
+            <div class="footer-heart reveal">
+                <img src="images/heart.png" alt="Heart" class="footer-heart-img">
+            </div>
+            <p class="footer-thankyou-en reveal">
+                Thank you for being a cherished part of our story.
+                We are forever grateful to our parents
+                for the gift of life, love, and opportunity,
+                and for always standing beside us as we follow our dreams.
+            </p>
+            <h2 class="footer-title reveal">ขอขอบคุณด้วยหัวใจ</h2>
+            <p class="footer-credit reveal">#YPMEMORY</p>
+        </div>
+    </footer>
+
+    <!-- Hidden audio element -->
+    <audio id="bg-music" loop preload="auto">
+        <source src="music/bgmusic.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="js/script.js?v=4.0"></script>
+</body>
+</html>

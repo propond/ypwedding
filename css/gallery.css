@@ -1,0 +1,237 @@
+/* =============================================
+   MAGAZINE GALLERY — Premium Editorial Collage
+   3 distinct grid patterns, fully responsive
+   ============================================= */
+
+/* --- Section spacing --- */
+.mg-section {
+    margin-bottom: 80px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.mg-section:last-child {
+    margin-bottom: 0;
+}
+
+/* --- Shared image item styles --- */
+.mg-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 6px;
+    cursor: pointer;
+    aspect-ratio: 4 / 5;
+}
+
+.mg-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    background: #f0ece8;
+}
+
+.mg-item:hover img {
+    transform: scale(1.06);
+}
+
+/* --- Quote block (Base Styles) --- */
+.mg-quote {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: transparent;
+    padding: 20px;
+    margin: 0;
+}
+
+/* Pattern A: acts as 1 grid cell automatically, gracefully packed by dense flow */
+
+/* Pattern B & C: Full Width Divider Layout */
+.mg-grid-b .mg-quote,
+.mg-grid-c .mg-quote {
+    grid-column: 1 / -1; /* Full width frame */
+    padding: 30px 20px;
+    margin: 10px 0;
+    max-width: 100%;
+}
+
+.mg-quote-mark {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 4rem;
+    line-height: 1;
+    color: var(--accent, #f98b88);
+    opacity: 0.6;
+    letter-spacing: 0;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.mg-quote-text {
+    font-family: var(--font-heading, 'Playfair Display', serif);
+    font-size: 1.4rem;
+    font-weight: 300;
+    line-height: 1.8;
+    color: var(--text-body, #555);
+    margin: 0;
+    max-width: 800px;
+}
+
+/* =============================================
+   PATTERN A — Collage with tall image
+   ============================================= */
+.mg-grid-a {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-auto-flow: dense;
+    gap: 8px;
+    padding: 0 15px;
+}
+
+/* Image 0: tall, spans 2 rows */
+.mg-grid-a > :nth-child(1) {
+    grid-row: span 2;
+}
+
+/* Image 7: wide, spans 2 columns */
+.mg-grid-a > :nth-child(9) {
+    grid-column: span 2;
+}
+
+/* =============================================
+   PATTERN B — Editorial with featured image
+   ============================================= */
+.mg-grid-b {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-auto-flow: dense;
+    gap: 8px;
+    padding: 0 15px;
+}
+
+/* Image 0: large featured, spans 2 col + 2 row */
+.mg-grid-b > :nth-child(1) {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+/* The 4 images after the quote (nth-child 7 to 10) 
+   span 2 out of 4 columns to create a perfect 2x2 grid */
+.mg-grid-b > :nth-child(7),
+.mg-grid-b > :nth-child(8),
+.mg-grid-b > :nth-child(9),
+.mg-grid-b > :nth-child(10) {
+    grid-column: span 2;
+}
+
+/* =============================================
+   PATTERN B REVERSED — Huge picture on the right
+   ============================================= */
+.mg-grid-b-reversed {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-auto-flow: dense;
+    gap: 8px;
+    padding: 0 15px;
+}
+
+/* Image 5: large featured, placed on the right (Col 3 to 4) */
+.mg-grid-b-reversed > :nth-child(5) {
+    grid-column: 3 / span 2;
+    grid-row: 1 / span 2;
+}
+
+/* Ensure layout elements ignore the 4/5 global aspect-ratio 
+   so they properly fill their entire grid frame perfectly! */
+.mg-grid-a > :nth-child(1),
+.mg-grid-a > :nth-child(9),
+.mg-grid-b > :nth-child(1),
+.mg-grid-b > :nth-child(2),
+.mg-grid-b > :nth-child(3),
+.mg-grid-b > :nth-child(4),
+.mg-grid-b > :nth-child(5),
+.mg-grid-b > :nth-child(6),
+.mg-grid-b > :nth-child(7),
+.mg-grid-b > :nth-child(8),
+.mg-grid-b > :nth-child(9),
+.mg-grid-b > :nth-child(10),
+.mg-grid-c > :nth-child(2),
+.mg-grid-c > :nth-child(6),
+.mg-grid-c > :nth-child(8),
+.mg-grid-c > :nth-child(9),
+.mg-grid-b-reversed > :nth-child(1),
+.mg-grid-b-reversed > :nth-child(2),
+.mg-grid-b-reversed > :nth-child(3),
+.mg-grid-b-reversed > :nth-child(4),
+.mg-grid-b-reversed > :nth-child(5) {
+    aspect-ratio: auto;
+    height: 100%;
+}
+
+/* =============================================
+   PATTERN C — Elegant mixed vertical/horizontal
+   ============================================= */
+.mg-grid-c {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-auto-flow: dense;
+    gap: 8px;
+    padding: 0 15px;
+}
+
+/* Image 1 & 5: wide, spans 2 columns */
+.mg-grid-c > :nth-child(2),
+.mg-grid-c > :nth-child(6) {
+    grid-column: span 2;
+}
+
+/* Image 8: tall, spans 2 rows */
+.mg-grid-c > :nth-child(8) {
+    grid-row: span 2;
+}
+.mg-grid-c > :nth-child(9) {
+    grid-column: span 2;
+}
+
+/* =============================================
+   RESPONSIVE — TABLET (≤900px)
+   ============================================= */
+@media (max-width: 900px) {
+    .mg-section { margin-bottom: 40px; }
+    .mg-grid-a, .mg-grid-b, .mg-grid-c, .mg-grid-b-reversed { gap: 12px; padding: 0 10px; }
+
+    /* Pattern A quote stays compact */
+    .mg-grid-a .mg-quote-mark { font-size: 2.5rem; margin-bottom: 5px; }
+    .mg-grid-a .mg-quote-text { font-size: 0.95rem; line-height: 1.5; }
+
+    /* Pattern B & C quotes stay prominent */
+    .mg-grid-b .mg-quote, .mg-grid-c .mg-quote { padding: 40px 15px; }
+    .mg-grid-b .mg-quote-mark, .mg-grid-c .mg-quote-mark { font-size: 3rem; margin-bottom: 10px; }
+    .mg-grid-b .mg-quote-text, .mg-grid-c .mg-quote-text { font-size: 1.15rem; line-height: 1.7; }
+}
+
+/* =============================================
+   RESPONSIVE — MOBILE (≤600px)
+   ============================================= */
+@media (max-width: 600px) {
+    .mg-section { margin-bottom: 30px; }
+    .mg-grid-a, .mg-grid-b, .mg-grid-c, .mg-grid-b-reversed { gap: 6px; padding: 0 5px; }
+    .mg-item { border-radius: 4px; }
+    
+    /* Pattern A quote fits tiny cell */
+    .mg-grid-a .mg-quote { padding: 10px 5px; }
+    .mg-grid-a .mg-quote-mark { font-size: 1.8rem; margin-bottom: 5px; }
+    .mg-grid-a .mg-quote-text { font-size: 0.75rem; line-height: 1.4; }
+
+    /* Pattern B & C quotes span full width on their own row */
+    .mg-grid-b .mg-quote, .mg-grid-c .mg-quote { padding: 15px 10px; margin: 5px 0; }
+    .mg-grid-b .mg-quote-mark, .mg-grid-c .mg-quote-mark { font-size: 2.2rem; margin-bottom: 5px; }
+    .mg-grid-b .mg-quote-text, .mg-grid-c .mg-quote-text { font-size: 1rem; line-height: 1.5; }
+}
