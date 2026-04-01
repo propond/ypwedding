@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body, html { margin: 0; padding: 0; overflow: hidden; }
+        .og-container {
+            width: 1200px;
+            height: 630px;
+            background-image: url('../images/gallery-1774932543-8737.webp');
+            background-size: cover;
+            background-position: center 25%;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            position: relative;
+        }
+        .overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom, transparent 60%, rgba(0,0,0,0.4));
+        }
+        .text {
+            position: relative;
+            z-index: 2;
+            color: white;
+            font-family: 'Playfair Display', serif;
+            text-align: center;
+            margin-bottom: 60px;
+            text-shadow: 0 4px 15px rgba(0,0,0,0.5);
+        }
+        .names { font-size: 64px; letter-spacing: 0.1em; font-weight: bold; }
+        .date { font-size: 32px; letter-spacing: 0.2em; opacity: 0.9; margin-top: 10px; }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="og-container">
+        <div class="overlay"></div>
+        <div class="text">
+            <div class="names">Munaree & Panudach</div>
+            <div class="date">25 . 04 . 2026</div>
+        </div>
+    </div>
+</body>
+</html>
